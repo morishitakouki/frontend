@@ -11,4 +11,7 @@ COPY . ./
 
 RUN npm run build
 
+# この行は必要に応じて
 ENV CI=true
+
+# npm startを直接実行するように変更する必要はありません
