@@ -7,7 +7,9 @@ COPY ["package.json", "package-lock.json*", "./"]
 RUN npm install -g npm@8.10.0
 RUN npm install
 
-COPY . ./
+ RUN npm install -g serve
+
+COPY . .
 
 RUN npm run build
 
@@ -15,3 +17,4 @@ RUN npm run build
 ENV CI=true
 
 # npm startを直接実行するように変更する必要はありません
+CMD ["serve", "-s", "build"]
