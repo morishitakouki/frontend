@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+
+
+
+
+
+
+
+.content {
+  margin-left: 220px; /* サイドバーの幅と同じ値 */
+  padding: 20px;
+}
+
+
+
+
+
+
+/* アニメーションの定義 */
+@keyframes slide-in {
+  from {
+    transform: translateY(-50px); /* 上から50px移動 */
+    opacity: 0; /* 透明から表示 */
+  }
+  to {
+    transform: translateY(0); /* 元の位置に移動 */
+    opacity: 1; /* 完全に表示 */
+  }
+}
+
+/* アニメーションの定義 */
+@keyframes slide-out {
+  from {
+    transform: translateY(0); /* 元の位置 */
+    opacity: 1; /* 完全に表示 */
+  }
+  to {
+    transform: translateY(-50px); /* 上に50px移動 */
+    opacity: 0; /* 透明に */
+  }
+}
+
+
+.custom-navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.login-container {
+  max-width: 300px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 50px;
+  transition: margin-top 0.5s ease-in-out;
+}
+
+.login-heading {
+  text-align: center;
+}
+
+.login-container.slide-in {
+  margin-top: 0;
+}
+
+.animated-alert {
+  animation: slide-in 0.5s ease-out;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.empty-posts-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh; 
+  font-size: 1.5rem;
+  padding: 20px;
+  margin: 20px auto; 
+}
+
+.background-image {
+  /* 背景画像のURLを指定 */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#form-box {
+  background-color: rgba(255, 255, 255, 0.8); /* ボックスの背景色と透明度を設定 */
+  padding: 20px;
+  border-radius: 10px; /* ボックスの角を丸くする */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 影の設定 */
+  width: 100%;
+  max-width: 500px; /* ボックスの最大幅を指定 */
+  margin-bottom: 200px;
+}
