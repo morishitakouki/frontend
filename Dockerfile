@@ -11,6 +11,8 @@ RUN npm install
 
 COPY . .
 
+
+
 RUN npm run build
 
 # この行は必要に応じて
